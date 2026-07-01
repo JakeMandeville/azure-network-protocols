@@ -53,7 +53,24 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
       <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/SSH%20traffic%20-%20linux%20VM.png"></p>
       Each keystroke once connected to the linux VM will appear in the SSH traffic in wireshark.
       <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/SSH%20request.png"></p>
+      Filter out tcp port traffic.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/port%20filter.png"></p>
+      Upon closing linux there will also be another result in the SSH traffic.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/close%20linux.png"></p>
     </p>
+  <h3>DHCP Traffic</h3>
+    <p>
+      Using udp.port==67 || udp.port==68 will show everything under port 67 or port 68. Running a batch file to run ipconfig release and ipconfig renew will provide results.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Batch%20file%20DHCP%20filter.png"></p>
+    </p>
+  <h3>DNS TRAFFIC</h3>
+    <p>
+      Back in wireshark we can view the DNS traffic, this example uses nslookup of Disney.com
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/DNS%20nslookup.png"></p>
+    </p>
+  <h3>RDP filter</h3>
+  Viewing RDP traffic will constantly be providing results in Wireshark because traffic will be a constant while connecting.
+  <img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/rdp%20filter.png">
   <h3>Basic Linux Commands</h3>
     <p>
       View the ID of the user connected to the linux device as well as hostname to view the name of the linux device.
