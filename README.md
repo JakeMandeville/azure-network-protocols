@@ -27,10 +27,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Observe SSH traffic, DHCP traffic, DNS traffic and RDP traffic.
 
 <h2>Actions and Observations</h2>
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 <p>
   Start off with signing up with <a href="https://azure.microsoft.com/en-us">Microsoft Azure</a> and navigate to the Resource groups tab and get that created, this will be contain the Windows and Linux VMs. 
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Screenshot%202026-07-01%20183914.png"></p>
@@ -38,8 +34,11 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Screenshot%202026-07-01%20184259.png"></p>
   Using the settings that you decicde to set up with both virtual machines should end up created and be able to be accessed.
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Linux%20VM.png"></p>
+  <h3>Wireshark</h3>
   Start off by connecting to the windows VM, open up the Remote Desktop Connection application, enter the IP of the windows VM and connect to the machine nand sign into the device using the chosen username and password. Once signed in start installing <a href="https://www.wireshark.org/download.html">Wireshark.</a>
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Install%20and%20run%20Wireshark.png"></p>
-  After starting wireshark it will begin showing all the traffic going through the device, you can the begin filtering out specific type of traffic such as ICMP traffic.
+  After starting wireshark it will begin showing all the traffic going through the device, you can the begin filtering out specific type of traffic such as ICMP traffic. In this example, the windows VM was sending a ping over to the Linux IP address and gettting a response and wireshark displays that traffic.
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/ICMP%20filter.png"></p>
+  You can use IPConfig /all in the command prompt to view the MAC address and compare this with the results shown in wireshark.
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/view%20device%20MAC.png"></p>
 <br />
