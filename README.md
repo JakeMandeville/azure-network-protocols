@@ -15,15 +15,16 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (21H2)
-- Ubuntu Server 20.04
+- Windows 11
+- Ubuntu Server
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Creating a resource group with Microsoft Azure
+- Set up a windows Virtual Machine and A Linux Virtual Machine.
+- View ICMP traffic
+- Configure a Firewall
+- Observe SSH traffic, DHCP traffic, DNS traffic and RDP traffic.
 
 <h2>Actions and Observations</h2>
 
@@ -31,22 +32,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+  Start off with signing up with <a href="https://azure.microsoft.com/en-us">Microsoft Azure</a> and navigate to the Resource groups tab and get that created, this will be contain the Windows and Linux VMs. 
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Screenshot%202026-07-01%20183914.png"></p>
+  Next, Navigating to the Virtual Machines tab you can start creating both virtual machines, these will be under the same subscription, in the same resource group, and in the same virtual network. (creating the Virtual machines can automatically set up the virtual network)
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Screenshot%202026-07-01%20184259.png"></p>
+  Using the settings that you decicde to set up with both virtual machines should end up created and be able to be accessed.
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Linux%20VM.png"></p>
+  Start off by connecting to the windows VM, open up the Remote Desktop Connection application, enter the IP of the windows VM and connect to the machine nand sign into the device using the chosen username and password. Once signed in start installing <a href="https://www.wireshark.org/download.html">Wireshark.</a>
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Install%20and%20run%20Wireshark.png"></p>
+  After starting wireshark it will begin showing all the traffic going through the device, you can the begin filtering out specific type of traffic such as ICMP traffic.
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/ICMP%20filter.png"></p>
 <br />
