@@ -39,6 +39,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Install%20and%20run%20Wireshark.png"></p>
   After starting wireshark it will begin showing all the traffic going through the device, you can the begin filtering out specific type of traffic such as ICMP traffic. In this example, the windows VM was sending a ping over to the Linux IP address and gettting a response and wireshark displays that traffic.
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/ICMP%20filter.png"></p>
-  You can use IPConfig /all in the command prompt to view the MAC address and compare this with the results shown in wireshark.
+  You can use IPConfig /all in the command prompt to view the MAC address and compare this with the results shown in wireshark. The Linux MAC address would be the destination, and the source would be the Microsoft MAC address
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/view%20device%20MAC.png"></p>
 <br />
