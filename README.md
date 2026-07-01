@@ -42,6 +42,27 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   You can use IPConfig /all in the command prompt to view the MAC address and compare this with the results shown in wireshark. Since this is viewing one of the replies rather than a request this is showing the destination as the Windows device and the source as the Linux device.
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/view%20device%20MAC.png"></p>
   <h3>Set up a firewall and monitor pings</h3>
-  Back in Azure go to the Linux VM and navigate to the Network Settings, from here set up inbound security rules. Here will block all ping requests so the Windows VM will no longer be be able to ping the device.
+  Back in Azure go to the Linux VM and navigate to the Network Settings, from here set up inbound security rules. Here will block all ping requests so the Windows VM will no longer be be able to ping the device. Below will show a continuous ping that was working and then began being blocked.
   <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Firewall%20block%20ping.png"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Ping%20denied.png"></p>
+  Once this is done, for the next parts of the lab we will have to deactivate this firewall blocking all pings.
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/reenable%20ping.png"></p>
+  <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/replies%20reenabled.png"></p>
+  <h3>Observing SSH Traffic</h3>
+    <p>
+      Back in wireshark, instead of filtering out ICMP traffic filter out SSH traffic, then using the windows powershell connect to the Linux VM.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/SSH%20traffic%20-%20linux%20VM.png"></p>
+      Each keystroke once connected to the linux VM will appear in the SSH traffic in wireshark.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/SSH%20request.png"></p>
+    </p>
+  <h3>Basic Linux Commands</h3>
+    <p>
+      View the ID of the user connected to the linux device as well as hostname to view the name of the linux device.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Linux%20VM%20info.png"></p>
+      uname -a will provide information about the Operating system.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/Linux%20ID%20uname.png"></p>
+      Creating a test text file using "touch test.txt" and view this file using ls (ls returns everything in the current working directory)
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/linux%20create%20txt.png"></p>
+      PWD will print the directory that you are currently working out of and exit will close the Linux machine.
+      <p align="center"><img src="https://github.com/JakeMandeville/course-pictures/blob/main/Virtual%20Machines/close%20linux.png"></p>
+    </p>
 <br />
